@@ -1,1 +1,17 @@
-<p>accueil works!</p>
+<div class="accueil">
+  <h1>Bienvenue sur CodeNova</h1>
+  <p>Le blog tech qui décrypte le développement web, l'IA et la cybersécurité.</p>
+
+  <div class="liste-articles">
+    <div class="carte-article" *ngFor="let article of articles">
+      <img [src]="article.image" alt="{{ article.titre }}" class="carte-image">
+      <div class="carte-contenu">
+        <span class="carte-categorie">{{ article.categorie }}</span>
+        <h2>{{ article.titre }}</h2>
+        <p class="carte-meta">Par {{ article.auteur }} • {{ article.date }}</p>
+        <p>{{ article.extrait }}</p>
+        <a [routerLink]="['/articles', article.id]" class="lire-plus">Lire l'article →</a>
+      </div>
+    </div>
+  </div>
+</div>
