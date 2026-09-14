@@ -1,1 +1,67 @@
-<p>contact works!</p>
+<section class="contact">
+  <p class="eyebrow">Contact</p>
+  <h1>Une question, une remarque ?</h1>
+  <p class="contact-sub">
+    Ce formulaire n'est pas connecte a un serveur, il illustre simplement le binding
+    bidirectionnel d'Angular avec ngModel.
+  </p>
+
+  @if (envoye) {
+    <div class="succes">
+      Merci {{ nom }}, votre message a bien ete pris en compte (simulation).
+    </div>
+  }
+
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+    <div class="champ">
+      <label for="nom">Nom</label>
+      <input
+        id="nom"
+        name="nom"
+        type="text"
+        [(ngModel)]="nom"
+        #nomField="ngModel"
+        required
+        minlength="2" />
+      @if (nomField.invalid && nomField.touched) {
+        <p class="erreur">Merci d'indiquer votre nom (2 caracteres minimum).</p>
+      }
+    </div>
+
+    <div class="champ">
+      <label for="email">E-mail</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        [(ngModel)]="email"
+        #emailField="ngModel"
+        required
+        email />
+      @if (emailField.invalid && emailField.touched) {
+        <p class="erreur">Merci d'indiquer une adresse e-mail valide.</p>
+      }
+    </div>
+
+    <div class="champ">
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        [(ngModel)]="message"
+        #messageField="ngModel"
+        required
+        minlength="10"></textarea>
+      @if (messageField.invalid && messageField.touched) {
+        <p class="erreur">Le message doit contenir au moins 10 caracteres.</p>
+      }
+    </div>
+
+    <button type="submit" [disabled]="contactForm.invalid">Envoyer</button>
+
+    <p class="apercu">
+      Apercu en direct : {{ message.length }} caractere(s) saisis.
+    </p>
+  </form>
+</section>
