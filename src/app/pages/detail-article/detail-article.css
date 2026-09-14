@@ -1,0 +1,34 @@
+.detail-article {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.retour {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.auteur {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.image-article {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.contenu {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}

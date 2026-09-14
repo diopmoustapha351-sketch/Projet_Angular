@@ -1,1 +1,18 @@
-<p>detail-article works!</p>
+@if (article) {
+  <article class="detail-article">
+    <a routerLink="/" class="retour">← Retour aux articles</a>
+
+    <p class="meta">{{ article.categorie }} · {{ article.date }}</p>
+    <h1>{{ article.titre }}</h1>
+    <p class="auteur">Par {{ article.auteur }}</p>
+
+    <img [src]="article.image" [alt]="article.titre" class="image-article" />
+
+    <p class="contenu">{{ article.contenu }}</p>
+  </article>
+} @else {
+  <div class="introuvable">
+    <h1>Article introuvable</h1>
+    <a routerLink="/" class="retour">← Retour aux articles</a>
+  </div>
+}

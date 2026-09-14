@@ -1,21 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DetailArticle } from './detail-article';
+import { Component } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { Article } from '../../models/article.model';
+import { ArticleService } from '../../services/article';
 
-describe('DetailArticle', () => {
-  let component: DetailArticle;
-  let fixture: ComponentFixture<DetailArticle>;
+@Component({
+  imports: [RouterLink],
+  selector: 'app-detail-article',
+  styleUrl: './detail-article.css',
+  templateUrl: './detail-article.html',
+})
+export class DetailArticle {
+  article: Article | undefined;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [DetailArticle],
-    }).compileComponents();
+  constructor(
+    private route: ActivatedRoute,
+    private articleService: ArticleService
+  ) {}
 
-    fixture = TestBed.createComponent(DetailArticle);
-    component = fixture.componentInstance;
-    await fixture.whenStable();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.article = this.articleService.getArticleById(id);
+  }
+}
