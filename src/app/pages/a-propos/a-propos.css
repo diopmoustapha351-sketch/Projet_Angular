@@ -1,0 +1,42 @@
+.a-propos {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  color: #4FD1C5;
+  margin-bottom: 0.5rem;
+}
+
+.a-propos h1 {
+  margin-bottom: 1.2rem;
+}
+
+.a-propos > p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.equipe {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.membre {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.membre h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.membre p {
+  color: #666;
+  font-size: 0.92rem;
+  margin: 0;
+}
