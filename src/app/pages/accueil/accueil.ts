@@ -16,4 +16,14 @@ export class Accueil {
   constructor(private articleService: ArticleService) {
     this.articles = this.articleService.getArticles();
   }
+
+  classeCategorie(categorie: string): string {
+    const map: Record<string, string> = {
+      'Web': 'web',
+      'IA': 'ai',
+      'Cybersécurité': 'security',
+      'Mobile': 'mobile'
+    };
+    return map[categorie] || 'web';
+  }
 }

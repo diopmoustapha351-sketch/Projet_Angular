@@ -1,17 +1,74 @@
-<div class="accueil">
-  <h1>Bienvenue sur CodeNova</h1>
-  <p>Le blog tech qui décrypte le développement web, l'IA et la cybersécurité.</p>
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">BLOG TECH & INNOVATION</div>
 
-  <div class="liste-articles">
-    <div class="carte-article" *ngFor="let article of articles">
-      <img [src]="article.image" alt="{{ article.titre }}" class="carte-image">
-      <div class="carte-contenu">
-        <span class="carte-categorie">{{ article.categorie }}</span>
-        <h2>{{ article.titre }}</h2>
-        <p class="carte-meta">Par {{ article.auteur }} • {{ article.date }}</p>
-        <p>{{ article.extrait }}</p>
-        <a [routerLink]="['/articles', article.id]" class="lire-plus">Lire l'article →</a>
-      </div>
+    <h1>Bienvenue sur <span>CodeNova</span></h1>
+
+    <p>
+      Le blog tech qui décrypte le développement web, l'IA et la cybersécurité.
+      Des articles simples, clairs et utiles pour apprendre, progresser et rester
+      à jour dans le monde du numérique.
+    </p>
+
+    <div class="hero-buttons">
+      <a routerLink="/" fragment="articles" class="primary-button">📖 Explorer les articles →</a>
+      <a routerLink="/a-propos" class="secondary-button">En savoir plus →</a>
     </div>
   </div>
-</div>
+
+  <div class="hero-visual">
+    <div class="code-window">
+      <div class="window-top"><span></span><span></span><span></span></div>
+      <div class="code-lines">
+        <p>&lt;<b>code</b>&gt;</p>
+        <p>&nbsp;&nbsp;const future = <i>"innovation"</i>;</p>
+        <p>&nbsp;&nbsp;learn();</p>
+        <p>&nbsp;&nbsp;create();</p>
+        <p>&nbsp;&nbsp;buildFuture();</p>
+        <p>&lt;/<b>code</b>&gt;</p>
+      </div>
+    </div>
+    <div class="tech-bubble bubble-web">◉ Web</div>
+    <div class="tech-bubble bubble-ai">◉ IA</div>
+    <div class="tech-bubble bubble-security">♢ Cybersécurité</div>
+  </div>
+</section>
+
+<main id="articles" class="articles-section">
+  <div class="section-header">
+    <div>
+      <div class="section-line"></div>
+      <h2>Derniers articles</h2>
+      <p>
+        Découvrez nos derniers articles et plongez dans l'univers du développement,
+        de l'intelligence artificielle et de la cybersécurité.
+      </p>
+    </div>
+  </div>
+
+  <div class="articles-grid">
+    <article class="card" *ngFor="let article of articles">
+      <div class="card-image">
+        <img [src]="article.image" [alt]="article.titre">
+        <span class="category" [ngClass]="classeCategorie(article.categorie)">
+          {{ article.categorie }}
+        </span>
+      </div>
+
+      <div class="card-content">
+        <h3>{{ article.titre }}</h3>
+
+        <div class="author">
+          <span>👤</span>
+          Par <strong>{{ article.auteur }}</strong>
+          <span>•</span>
+          {{ article.date }}
+        </div>
+
+        <p>{{ article.extrait }}</p>
+
+        <a [routerLink]="['/articles', article.id]" class="read-more">Lire l'article →</a>
+      </div>
+    </article>
+  </div>
+</main>
