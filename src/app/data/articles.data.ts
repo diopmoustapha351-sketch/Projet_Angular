@@ -9,7 +9,7 @@ export const ARTICLES: Article[] = [
     categorie: 'Web',
     extrait: 'Angular n\'était pas notre premier choix spontané, mais c\'est le framework qu\'on a étudié en cours de Technologie Web.',
     contenu: 'Il existe plusieurs frameworks front-end populaires comme React ou Vue, mais pour ce projet on a utilisé Angular parce que c\'est celui vu en cours et imposé par le sujet. Ça nous a permis de mettre en pratique directement les notions apprises : composants, services, routage.',
-    image: 'https://picsum.photos/seed/codenova1/800/500'
+    image: 'assets/images/article1.jpg'
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const ARTICLES: Article[] = [
     categorie: 'Web',
     extrait: 'Le data binding, c\'est ce qui relie automatiquement les données de notre code à ce qui s\'affiche sur la page.',
     contenu: 'Dans Angular, le data binding permet de relier automatiquement les données et l\'affichage. Par exemple, quand une variable change dans le composant, l\'affichage se met à jour tout seul, sans qu\'on ait besoin de le faire manuellement. On utilise ça notamment dans notre formulaire de contact avec le binding bidirectionnel.',
-    image: 'https://picsum.photos/seed/codenova2/800/500'
+    image: 'assets/images/article2.avif'
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const ARTICLES: Article[] = [
     categorie: 'IA',
     extrait: 'On a déjà utilisé une IA comme Claude pour nous aider à comprendre du code, et ça change vraiment la façon d\'apprendre.',
     contenu: 'Les IA génératives comme Claude ou ChatGPT sont de plus en plus utilisées par les étudiants en développement. On les utilise notamment pour nous aider à comprendre du code qu\'on ne maîtrise pas encore, ou pour déboguer une erreur. Ça ne remplace pas l\'apprentissage, mais ça aide à avancer plus vite quand on est bloqué.',
-    image: 'https://picsum.photos/seed/codenova3/800/500'
+    image: 'assets/images/article3.jpg'
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const ARTICLES: Article[] = [
     categorie: 'Cybersécurité',
     extrait: 'Une règle de base en sécurité web : ne jamais stocker un mot de passe en clair dans une base de données.',
     contenu: 'Parmi les bonnes pratiques essentielles en sécurité web, il y a le fait de ne jamais stocker un mot de passe en clair. Il faut toujours le hasher avant de l\'enregistrer. D\'autres réflexes importants : valider les entrées utilisateur, utiliser HTTPS, et garder ses dépendances à jour pour éviter les failles connues.',
-    image: 'https://picsum.photos/seed/codenova4/800/500'
+    image: 'assets/images/article4.webp'
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ export const ARTICLES: Article[] = [
     categorie: 'Mobile',
     extrait: 'On n\'avait jamais entendu parler du développement hybride avant de se pencher sur le sujet pour cet article.',
     contenu: 'Le développement mobile hybride permet d\'écrire un seul code qui fonctionne à la fois sur Android et sur iOS, avec des outils comme Flutter ou React Native. C\'est un concept qu\'on découvre en écrivant cet article, mais qui semble très utile pour les petites équipes qui n\'ont pas le temps de développer deux applications natives séparées.',
-    image: 'https://picsum.photos/seed/codenova5/800/500'
+    image: 'assets/images/article5.jpg'
   },
   {
     id: 6,
@@ -59,6 +59,6 @@ export const ARTICLES: Article[] = [
     categorie: 'Web',
     extrait: 'Le plus dur pour nous jusqu\'ici, ça a été de comprendre comment gérer Git et Angular ensemble.',
     contenu: 'Sur ce projet, la partie technique Angular en elle-même n\'était pas la plus difficile. Ce qui nous a le plus posé problème, c\'est de comprendre comment gérer Git (les commits, le push, la fusion) en parallèle d\'un projet Angular fonctionnel. Une fois qu\'on a compris le fonctionnement de base, tout est devenu plus fluide.',
-    image: 'https://picsum.photos/seed/codenova6/800/500'
+    image: 'assets/images/article6.jpg'
   }
 ];

@@ -1,42 +1,112 @@
 .a-propos {
-  max-width: 640px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
 }
 
-.eyebrow {
-  font-size: 0.85rem;
-  color: #4FD1C5;
-  margin-bottom: 0.5rem;
+.badge-wrap {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #4F46E5;
+  background: #EEF2FF;
+  border-radius: 999px;
 }
 
 .a-propos h1 {
-  margin-bottom: 1.2rem;
+  text-align: center;
+  font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: #0F172A;
+  margin-bottom: 1.5rem;
 }
 
-.a-propos > p {
-  color: #555;
-  margin-bottom: 2rem;
+.description {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 3rem;
+  color: #64748B;
+  font-size: 1.08rem;
+  line-height: 1.7;
 }
 
-.equipe {
+.description strong {
+  color: #1E293B;
+}
+
+.cartes {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 }
 
-.membre {
-  border-top: 1px solid #ddd;
-  padding-top: 1rem;
+.carte {
+  padding: 1.6rem;
+  background: white;
+  border: 1px solid #F1F5F9;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.15s ease;
 }
 
-.membre h2 {
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
+.carte:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-.membre p {
-  color: #666;
-  font-size: 0.92rem;
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #4F46E5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.carte h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 0.3rem;
+}
+
+.role {
+  font-size: 0.85rem;
+  color: #64748B;
+  margin-bottom: 1rem;
+}
+
+.carte ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.carte ul li {
+  font-size: 0.88rem;
+  color: #475569;
+}
+
+@media (max-width: 600px) {
+  .cartes {
+    grid-template-columns: 1fr;
+  }
 }

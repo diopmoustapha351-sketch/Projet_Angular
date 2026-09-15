@@ -1,34 +1,121 @@
 .detail-article {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  color: #1E293B;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .retour {
-  display: inline-block;
-  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  color: inherit;
+  color: #64748B;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
 }
 
-.meta {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 0.3rem;
+.retour:hover {
+  color: #4F46E5;
 }
 
-.auteur {
-  color: #666;
+.badge {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #4F46E5;
+  background: #EEF2FF;
+  border-radius: 999px;
+}
+
+.detail-article h1 {
+  font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: #0F172A;
   margin-bottom: 1.5rem;
 }
 
-.image-article {
+.auteur-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-bottom: 1.8rem;
+  margin-bottom: 1.8rem;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #4F46E5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.auteur-nom {
+  font-weight: 600;
+  color: #0F172A;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.auteur-meta {
+  color: #64748B;
+  font-size: 0.82rem;
+  margin: 0.1rem 0 0;
+}
+
+.hero-img {
   width: 100%;
-  border-radius: 6px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.corps {
+  color: #475569;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: #334155;
+  line-height: 1.7;
   margin-bottom: 1.5rem;
 }
 
-.contenu {
-  font-size: 1.05rem;
-  line-height: 1.7;
+.citation {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background: #F8FAFC;
+  border-left: 4px solid #4F46E5;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: #334155;
+}
+
+.introuvable {
+  max-width: 500px;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: center;
+  color: #64748B;
 }
