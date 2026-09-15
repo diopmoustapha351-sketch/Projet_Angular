@@ -1,29 +1,39 @@
-# CodeNova — Blog Tech
+# CodeNova
 
-Blog tech réalisé dans le cadre du cours **Technologie Web 3** (Licence 1 Informatique), avec Angular.
+Blog tech statique réalisé avec Angular dans le cadre du cours **Technologie Web 3**
+(Licence 1 — Informatique). Le site présente des articles sur le développement web, l'IA,
+la cybersécurité et le mobile. Toutes les données sont statiques (aucune base de données,
+aucune API).
 
-🔗 **Site déployé** : https://codenova-blog.web.app
-
-## Thème
-
-Un blog qui traite de sujets tech : développement web, intelligence artificielle, cybersécurité et mobile.
+**Site déployé :** https://codenova-blog.web.app
 
 ## Binôme
 
-- **Moustapha Diop** — Modèle de données, service ArticleService, Navbar/Footer, routing, page d'accueil, déploiement Firebase
-- **Aïssatou Thiam** — Page de détail d'article, page À propos, page Contact (formulaire avec ngModel), design
+| Nom | Rôle principal |
+|---|---|
+| Moustapha Diop | Navbar, footer, routage, service de données, structure initiale de la page d'accueil |
+| Aïssatou Thiam | Page de détail d'article, page "À propos", page "Contact", images des articles, redesign visuel (accueil, détail, à propos) |
 
-## Lancer le projet en local
+## Fonctionnalités
 
-```bash
-npm install
-ng serve
-```
+- **Page d'accueil (`/`)** — hero de présentation et liste des articles générée
+  dynamiquement (`*ngFor`) à partir du service de données, avec badge de catégorie coloré.
+- **Page de détail (`/articles/:id`)** — affiche un article à partir de son identifiant
+  dans l'URL, récupéré via `ActivatedRoute`.
+- **Page "À propos" (`/a-propos`)** — présentation du binôme et du projet.
+- **Page "Contact" (`/contact`)** — formulaire avec binding bidirectionnel (`[(ngModel)]`)
+  et validation (nom, email, message).
+- **Navbar et footer communs**, réutilisés sur toutes les pages via le routeur Angular.
 
-Puis ouvrez `http://localhost:4200` dans votre navigateur.
+## Notions Angular mises en pratique
 
-## Technologies utilisées
+| Notion | Où la voir dans le code |
+|---|---|
+| Composants | `navbar`, `footer`, `accueil`, `detail-article`, `a-propos`, `contact` |
+| Interpolation / property binding | `accueil.html`, `detail-article.html` |
+| Directive structurelle `*ngFor` | `accueil.html` (liste des articles) |
+| Binding bidirectionnel | `contact.html` avec `[(ngModel)]` |
+| Services + injection de dépendances | `ArticleService` (`services/article.ts`, `providedIn: 'root'`) |
+| Routage (routes, paramètres, routerLink) | `app.routes.ts`, `detail-article.ts` |
 
-- Angular (dernière version stable)
-- Données statiques (aucune base de données ni API)
-- Déploiement : Firebase Hosting
+## Structure du projet
